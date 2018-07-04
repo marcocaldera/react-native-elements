@@ -106,11 +106,11 @@ class SearchBar extends Component {
           inputStyle={[styles.input, inputStyle]}
           containerStyle={{
             flex: !hasFocus ? 0 : 1,
-            width: null,
+            width: !hasFocus ? '100%' : null,
           }}
           inputContainerStyle={[
             styles.inputContainer,
-            !hasFocus && { width: SCREEN_WIDTH - 32, marginRight: 15 },
+            !hasFocus && { width: '100%' - 32, marginRight: 15 },
             inputContainerStyle,
           ]}
           leftIcon={renderNode(Icon, searchIcon, defaultSearchIcon)}
@@ -179,7 +179,7 @@ SearchBar.defaultProps = {
 
 const styles = StyleSheet.create({
   container: {
-    width: SCREEN_WIDTH,
+    width: '100%',
     backgroundColor: '#f5f5f5',
     paddingBottom: 13,
     paddingTop: 13,
